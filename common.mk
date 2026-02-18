@@ -22,13 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system_ext \
-    vendor \
-    system \
     boot \
-    vbmeta_system \
     product \
-    vbmeta_vendor
+    system \
+    system_ext \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor \
+    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
